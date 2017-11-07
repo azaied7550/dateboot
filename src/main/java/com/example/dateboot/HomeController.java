@@ -14,7 +14,8 @@ public class HomeController {
 
     public String homePage(Model model){
         LocalDate today = LocalDate.now();
-        DateTimeFormatter dTF = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+        DateTimeFormatter dTF = DateTimeFormatter.ofPattern("dd MMMM yyyy"); //add full month name//
         DateTimeFormatter weekF= DateTimeFormatter.ofPattern("EEEE");
         String dateNow=today.format(dTF);
         String weekDay=today.format(weekF);
